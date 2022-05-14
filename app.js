@@ -3,7 +3,7 @@ const app  = express();
 
 app.get("/", (req, res) => {
     res.json({
-        message: "this is backend automatically deployed using github actions CICD"
+        message: "this backend automatically deployed using github actions CICD"
     })
 })
 
