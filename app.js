@@ -5,7 +5,7 @@ const io = require('socket.io')(server);
 
 app.get("/", (req, res) => {
     res.json({
-        message: "this backend automatically deployed using github actions CICD"
+        message: "this backend automatically deployed using github actions CICD, edited by another user"
     })
 })
 
