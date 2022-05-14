@@ -1,14 +1,17 @@
-const express = require("express");
-const chalk = require("chalk");
-const app  = express();
+const app = require('express')();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
 
 app.get("/", (req, res) => {
-    console.log(chalk.blue('Hello world!'));
     res.json({
         message: "this backend automatically deployed using github actions CICD"
     })
 })
 
-app.listen(8080, () => {
-    console.log("listening on port 8080")
-})
+
+io.on('connection', () => { /* … */ });
+
+server.listen(8080, () => {
+    console.log("running on port 8080")
+});
